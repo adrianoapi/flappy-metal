@@ -1,7 +1,8 @@
 var mainState = {
     preload: function () {
         // carrega o sprite
-        game.load.image('bird', 'assets/bird.png');
+        game.load.image('bird', 'assets/bird.png'); 
+        game.load.image('pipe', 'assets/pipe.png');
     },
     create: function () {
         game.state.backgroundColor = '#71c5cf';
