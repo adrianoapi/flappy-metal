@@ -1,8 +1,5 @@
-/* 
-  ///// ANIMAÇÕES SPRITES 
-*/
 
-   /* Animação de Fundo */
+   /* Anima��o de Fundo */
    @-webkit-keyframes animLand {
       0% { background-position: 0px 0px; }
       100% { background-position: -335px 0px; }
@@ -20,7 +17,7 @@
       100% { background-position: -335px 0px; }
    }
 
-   /* Animação de ceu */
+   /* animed sky */
    @-webkit-keyframes animSky {
       0% { background-position: 0px 100%; }
       100% { background-position: -275px 100%; }
@@ -38,7 +35,7 @@
       100% { background-position: -275px 100%; }
    }
 
-   /* Animação de bird */
+   /* animed bird */
    @-webkit-keyframes animBird {
       from { background-position: 0px 0px; }
       to { background-position: 0px -96px; }
@@ -56,7 +53,7 @@
       to { background-position: 0px -96px; }
    }
 
-   /* Animação dos canos */
+   /* animed pipe */
    @-webkit-keyframes animPipe {
       0% { left: 900px; }
       100% { left: -100px; }
@@ -74,7 +71,7 @@
       100% { left: -100px; }
    }
 
-   /* Animação dos blocos do muro */
+   /* animed wall */
    @-webkit-keyframes animCeiling {
       0% { background-position: 0px 0px; }
       100% { background-position: -63px 0px; }
@@ -92,9 +89,6 @@
       100% { background-position: -63px 0px; }
    }
 
-/* 
-  ///// CONFIGURAÇÕES DO GAME 
-*/
 
    html,
    body
@@ -124,7 +118,7 @@
    }
 
 /* 
-  ///// ÁREAS DO JOGO
+  ///// �?REAS DO JOGO
 */
 
    /* Plano de fundo */
@@ -142,7 +136,7 @@
       animation: animSky 7s linear infinite;
    }
 
-   /* Área para voo */
+   /* �?rea para voo */
    #flyarea-game
    {
       position: absolute;
