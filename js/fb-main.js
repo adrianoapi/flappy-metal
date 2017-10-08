@@ -10,7 +10,7 @@ var states = Object.freeze({
 
 // Variáveis lógicas
 var currentscore;
-var gravity =  0.25;
+var gravity = 0.25;
 var velocity = 0;
 var position = 180;
 var rotation = 0;
@@ -28,10 +28,11 @@ var replayclickable = false;
 
 // Sons
 var volume = 30;
-var soundJump = new buzz.sount("assets/sounds/sfx_wing.ogg");
-var soundScore = new buzz.sount("assets/sounds/sfx_point.ogg");
-var soundHit = new buzz.sount("assets/sounds/sfx_hit.ogg");
-var soundDie = new buzz.sount("assets/sounds/sfx_die.ogg");
-var soundSwoosh = new buzz.sount("assets/sounds/sfx_swooshing.ogg");
+var soundJump = new buzz.sound("assets/sounds/sfx_wing.ogg");
+var soundScore = new buzz.sound("assets/sounds/sfx_point.ogg");
+var soundHit = new buzz.sound("assets/sounds/sfx_hit.ogg");
+var soundDie = new buzz.sound("assets/sounds/sfx_die.ogg");
+var soundSwoosh = new buzz.sound("assets/sounds/sfx_swooshing.ogg");
+buzz.all().setVolume(volume);
 
 
