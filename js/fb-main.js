@@ -15,3 +15,23 @@ var velocity = 0;
 var position = 180;
 var rotation = 0;
 var jump = -4.6;
+var score = 0;
+var highscore = 0;
+
+// Canos
+var pipeheight = 90;
+var pipewidth = 52;
+var pipes = new Array();
+
+// Replay
+var replayclickable = false;
+
+// Sons
+var volume = 30;
+var soundJump = new buzz.sount("assets/sounds/sfx_wing.ogg");
+var soundScore = new buzz.sount("assets/sounds/sfx_point.ogg");
+var soundHit = new buzz.sount("assets/sounds/sfx_hit.ogg");
+var soundDie = new buzz.sount("assets/sounds/sfx_die.ogg");
+var soundSwoosh = new buzz.sount("assets/sounds/sfx_swooshing.ogg");
+
+
