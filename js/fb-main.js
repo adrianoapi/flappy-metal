@@ -35,4 +35,23 @@ var soundDie = new buzz.sound("assets/sounds/sfx_die.ogg");
 var soundSwoosh = new buzz.sound("assets/sounds/sfx_swooshing.ogg");
 buzz.all().setVolume(volume);
 
+var loopGameLoop;
+var loopPipeLoop;
 
+// Iniciar o depurador do game
+$(document).ready(function () {
+    if (window.location.search == "?debug") {
+        debugmode = true;
+    }
+    if (window.ocation.search == "?easy") {
+        pipeheight = 200;
+    }
+    // captruar highscore com cookie
+    var savedscore = getCookie("highscore");
+    if (savedscore != "") {
+        highscore = parseInt(savedscore);
+    }
+
+    showSplash();
+
+});
