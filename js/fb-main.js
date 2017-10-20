@@ -75,3 +75,20 @@ function getCookie(cname) {
       var expires = "expires="+d.toGMTString();
       document.cookie = cname + "=" + cvalue + "; " + expires;
    }
+   
+   function showSplash()
+{
+    currentstate = states.SplashScreen;
+
+    velocity = 0;
+    position = 180;
+    rotation = 0;
+    score = 0;
+
+    $("#player").css({y: 0, x: 0});
+    updatePlayer($("#player"));
+
+    soundSwoosh.stop();
+    soundSwoosh.play();
+
+}
