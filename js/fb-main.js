@@ -68,15 +68,15 @@ function getCookie(cname) {
     return false;
 }
 // Setando cookie
- function setCookie(cname,cvalue,exdays)
-   {
-      var d = new Date();
-      d.setTime(d.getTime()+(exdays*24*60*60*1000));
-      var expires = "expires="+d.toGMTString();
-      document.cookie = cname + "=" + cvalue + "; " + expires;
-   }
-   
-   function showSplash()
+function setCookie(cname, cvalue, exdays)
+{
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function showSplash()
 {
     currentstate = states.SplashScreen;
 
@@ -90,5 +90,21 @@ function getCookie(cname) {
 
     soundSwoosh.stop();
     soundSwoosh.play();
+
+}
+
+function startGame()
+{
+    currentstate = states.GameScreen;
+
+    // fade para a splash screen sumir
+    $("#splash").stop();
+    $("#splash").transition({opacity: 0}, 500, 'ease');
+
+
+   
+    var updaterate = 1000.0 / 60.0; // 60 fps
+    loopGameloop = setInterval(gameloop, updaterate);
+    loopPipeloop = setInterval(updatePipes, 1400);
 
 }
