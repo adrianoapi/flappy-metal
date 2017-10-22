@@ -108,3 +108,11 @@ function startGame()
     loopPipeloop = setInterval(updatePipes, 1400);
 
 }
+
+ function playerJump()
+   {
+      velocity = jump;
+      // iniciar o som com o pulo
+      soundJump.stop();
+      soundJump.play();
+   }
