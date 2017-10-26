@@ -102,17 +102,31 @@ function startGame()
     $("#splash").transition({opacity: 0}, 500, 'ease');
 
 
-   
+
     var updaterate = 1000.0 / 60.0; // 60 fps
     loopGameloop = setInterval(gameloop, updaterate);
     loopPipeloop = setInterval(updatePipes, 1400);
 
 }
 
- function playerJump()
-   {
-      velocity = jump;
-      // iniciar o som com o pulo
-      soundJump.stop();
-      soundJump.play();
-   }
+function playerJump()
+{
+    velocity = jump;
+    // iniciar o som com o pulo
+    soundJump.stop();
+    soundJump.play();
+}
+
+
+function setBigScore(erase)
+{
+    var elemscore = $("#bigscore");
+    elemscore.empty();
+
+    if (erase)
+        return;
+
+    var digits = score.toString().split('');
+    for (var i = 0; i < digits.length; i++)
+        elemscore.append("<img src='assets/font_big_" + digits[i] + ".png' alt='" + digits[i] + "'>");
+}
