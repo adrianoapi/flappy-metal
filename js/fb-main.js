@@ -130,3 +130,15 @@ function setBigScore(erase)
     for (var i = 0; i < digits.length; i++)
         elemscore.append("<img src='assets/font_big_" + digits[i] + ".png' alt='" + digits[i] + "'>");
 }
+
+	// setando a pontuação
+   function setSmallScore()
+   {
+
+      var elemscore = $("#currentscore");
+      elemscore.empty();
+      
+      var digits = score.toString().split('');
+      for(var i = 0; i < digits.length; i++)
+         elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>");
+   }
